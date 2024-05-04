@@ -23,6 +23,38 @@ let list = JSON.parse(localStorage.getItem('list'));
                 complete: false
             }]
     }];*/
+
+
+document.querySelector('.js-addToDoList').addEventListener('click', ()=>
+{
+    document.querySelector('.js-add-procedure').innerHTML = `
+        <div class="background"></div>
+        <div class="ui-new-todo">
+        <div class="close-contain">
+            <div class="close js-close">
+                <img class="x" src="images/x.svg">
+            </div>
+        </div>
+        <div class="contents">
+            <input class="js-input" placeholder="new todo list name">
+            <button class="js-enter">Enter</button>
+        </div>
+        </div>
+    `;
+    document.querySelector('.js-close').addEventListener('click', ()=>
+    {
+        document.querySelector('.js-add-procedure').innerHTML = ``
+    });
+
+    document.querySelector('.js-enter').addEventListener('click', ()=>
+    {
+        let nameTodo = document.querySelector('.js-input');
+        document.querySelector('.js-add-procedure').innerHTML = ``;
+        addList(nameTodo.value);
+        saveToStorage();
+    });    
+});
+    
 renderList();
 
 function renderTodoList(indexMain,todoList)
@@ -116,36 +148,6 @@ function addTodo(index, todoList)
 
     /*renderTodoList(index, todoList);*/
 }
-
-document.querySelector('.js-addToDoList').addEventListener('click', ()=>
-{
-    document.querySelector('.js-add-procedure').innerHTML = `
-        <div class="background"></div>
-        <div class="ui-new-todo">
-        <div class="close-contain">
-            <div class="close js-close">
-                <img class="x" src="images/x.svg">
-            </div>
-        </div>
-        <div class="contents">
-            <input class="js-input" placeholder="new todo list name">
-            <button class="js-enter">Enter</button>
-        </div>
-        </div>
-    `;
-    document.querySelector('.js-close').addEventListener('click', ()=>
-    {
-        document.querySelector('.js-add-procedure').innerHTML = ``
-    });
-
-    document.querySelector('.js-enter').addEventListener('click', ()=>
-    {
-        let nameTodo = document.querySelector('.js-input');
-        document.querySelector('.js-add-procedure').innerHTML = ``;
-        addList(nameTodo.value);
-        saveToStorage();
-    });    
-});
 
 function  renderList()
 {
