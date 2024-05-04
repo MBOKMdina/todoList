@@ -1,4 +1,4 @@
-let list = JSON.parse(localStorage.getItem('list'));
+let list = JSON.parse(localStorage.getItem('list')) || [];
 /*[
     {
         name: 'Khumbos plans', 
