@@ -67,7 +67,7 @@ function renderTodoList(indexMain,todoList)
         //const dueDate = todoObject.dueDate;
         count++;
         let checkBoxId = `${indexMain}${count}`;
-        const { name, dueDate, complete} = todoObject;
+        const { name, time, complete} = todoObject;
         let checked = '';
         if(complete)
         {
@@ -79,7 +79,7 @@ function renderTodoList(indexMain,todoList)
         }
         const html = `
         <div>${name}</div>
-        <div>${dueDate}</div>
+        <div>${time}</div>
         <button class="delete-todo-button js-delete-todo-button${indexMain}">Delete</button>
         <div class="checkBox js-checkBox" data-check-id="${checkBoxId}">${checked}</div>
         `; 
@@ -131,14 +131,14 @@ function addTodo(index, todoList)
     const name = inputElement.value;
 
     const dateInputElement = document.querySelector(`.js-due-date-input${index}`);
-    const dueDate = dateInputElement.value;
+    const time = dateInputElement.value;
 
     todoList.push(
     {
         //name: name, 
         //dueDate: dueDate
         name,
-        dueDate,
+        time,
         complete: false
     });
 
@@ -165,7 +165,7 @@ function  renderList()
             <p>${name}</p>
             <div class="todo-input-grid">
                 <input placeholder="Task" class="js-name-input${index} name-input">
-                <input type="date" class="js-due-date-input${index} due-date-input">
+                <input type="time" class="js-due-date-input${index} due-date-input">
                 <button class="add-todo-button js-add-todo-button">Add</button>
                 <div class="subtractList js-subtract-list"><img class="add" src="images/subtraction.png"></div>
             </div>
