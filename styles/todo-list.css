@@ -1,0 +1,178 @@
+body 
+{
+    font-family: Arial;
+    padding-right: 20px;
+}
+
+.todo-input-grid
+{
+    display: grid;
+    grid-template-columns: 200px 150px 100px 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.todo-grid
+{
+    display: grid;
+    grid-template-columns: 200px 150px 100px 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.todo-input-grid
+{
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.name-input,
+.due-date-input
+{
+    font-size: 15px;
+    padding: 6px;
+}
+
+.add-todo-button
+{
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-todo-button
+{
+    background-color: darkred;
+    color: white;
+    font-size: 15px;
+    cursor: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.checkBox
+{
+    height: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    border: solid;
+    border-style:dotted;
+    border-width: 1px;
+}
+
+.check
+{
+    height: 25px;
+    width: 25px;
+}
+
+.addToDoList,
+.subtractList
+{
+    height: 40px;
+    width: 40px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add
+{
+    height: 20px;
+    width: 20px;
+}
+
+.ui-new-todo
+{
+    background-color: grey;
+    height: 80px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -40.8px;
+    margin-left: -150.8px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.contents
+{
+    display:flex;
+}
+
+.close-contain
+{
+    background-color: lightgrey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.close
+{
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right:0px;
+    border-left: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.close:hover
+{
+    background-color: rgb(194, 7, 7);
+}
+
+.x
+{
+    height: 15px;
+    width: 15px;
+}
+
+.background
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.block
+{
+    display: flex;
+}
+
+.todo-block
+{
+    margin-right: 25px;
+}
+
