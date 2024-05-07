@@ -165,7 +165,7 @@ function  renderList()
             <p>${name}</p>
             <div class="todo-input-grid">
                 <input placeholder="Task" class="js-name-input${index} name-input">
-                <input type="time" class="js-due-date-input${index} due-date-input">
+                <input placeholder="Time" class="js-due-date-input${index} due-date-input">
                 <button class="add-todo-button js-add-todo-button">Add</button>
                 <div class="subtractList js-subtract-list"><img class="add" src="images/subtraction.png"></div>
             </div>
