@@ -178,13 +178,13 @@ body
 }
 
 
-@media (min-height: 750px)/*Will apply all styles until minimum height is mat*/
+@media (min-height: 695.3px)/*Will apply all styles until max width is mat*/
 {
     .todo-input-grid
     {
         display: grid;
         grid-template-columns: 200px 150px 100px 1fr;
-        column-gap: 10px;
+        column-gap: 30px;
         row-gap: 10px;
         align-items: center;
     }
@@ -199,7 +199,7 @@ body
     {
         display: grid;
         grid-template-columns: 200px 150px 100px 1fr;
-        column-gap: 10px;
+        column-gap: 30px;
         row-gap: 10px;
         align-items: center;
     }
@@ -209,11 +209,6 @@ body
     {
         font-size: 15px;
         padding: 6px;
-    }
-
-    .due-date-input
-    {
-        margin-right: 5px;
     }
 
     .checkBox
