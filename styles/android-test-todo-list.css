@@ -178,36 +178,36 @@ body
 }
 
 
-@media (min-height: 695.3px)/*Will apply all styles until min height is met*/
+@media (max-height: 695.3px)/*Will apply all styles until max height is met*/
 {
     .contents
     {
-        height: 42.4px;
+        height: 63.6px;
     }
 
     .todo-name
     {
         /*height: 42.4px;*/
-        width: 339.2px;
+        width: 508.8px;
     }
 
     .enter-button
     {
-        height: 42.4px;
-        width: 94.12px;
+        height: 63.6;
+        width: 141.18px;
     }
 
     .x
     {
-        height: 30px;
-        width: 30px;
+        height: 45px;
+        width: 45px;
     }
 
     .close
     {
         top: 0;
         bottom: 0;
-        width: 40px;
+        width: 60px;
         background-color: red;
         display: flex;
         justify-content: space-around;
@@ -226,7 +226,7 @@ body
         top: 0;
         left: 0;
         right: 0;
-        height: 40px;
+        height: 60px;
         border-bottom: solid;
         border-width: 1px;
         border-color: black;
@@ -235,16 +235,16 @@ body
     .ui-new-todo
     {
         background-color: grey;
-        height: 160px;
-        width: 600px;
+        height: 240px;
+        width: 900px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: fixed;
         top: 50%;
         left: 50%;
-        margin-top: -80.8px;
-        margin-left: -300.8px;
+        margin-top: -121.2px;
+        margin-left: -451.2px;
         border: solid;
         border-width: 1px;
         border-color: black;
