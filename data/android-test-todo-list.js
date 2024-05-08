@@ -36,8 +36,8 @@ document.querySelector('.js-addToDoList').addEventListener('click', ()=>
             </div>
         </div>
         <div class="contents">
-            <input class="js-input" placeholder="new todo list name">
-            <button class="js-enter">Enter</button>
+            <input class="todo-name js-input" placeholder="new todo list name">
+            <button class="enter-button js-enter">Enter</button>
         </div>
         </div>
     `;

@@ -180,6 +180,75 @@ body
 
 @media (min-height: 695.3px)/*Will apply all styles until min height is met*/
 {
+    .contents
+    {
+        height: 42.4px;
+    }
+
+    .todo-name
+    {
+        /*height: 42.4px;*/
+        width: 339.2px;
+    }
+
+    .enter-button
+    {
+        height: 42.4px;
+        width: 94.12px;
+    }
+
+    .x
+    {
+        height: 30px;
+        width: 30px;
+    }
+
+    .close
+    {
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        background-color: red;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right:0px;
+        border-left: solid;
+        border-width: 1px;
+        border-color: black;
+    }
+
+    .close-contain
+    {
+        background-color: lightgrey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: black;
+    }
+
+    .ui-new-todo
+    {
+        background-color: grey;
+        height: 160px;
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -80.8px;
+        margin-left: -300.8px;
+        border: solid;
+        border-width: 1px;
+        border-color: black;
+    }
     .todo-input-grid
     {
         display: grid;
