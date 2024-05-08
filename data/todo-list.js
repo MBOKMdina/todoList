@@ -52,7 +52,18 @@ document.querySelector('.js-addToDoList').addEventListener('click', ()=>
         document.querySelector('.js-add-procedure').innerHTML = ``;
         addList(nameTodo.value);
         saveToStorage();
-    });    
+    });
+
+    document.addEventListener('keydown', (event)=>
+    {
+        if(event.key === 'Enter')
+        {
+            let nameTodo = document.querySelector('.js-input');
+            document.querySelector('.js-add-procedure').innerHTML = ``;
+            addList(nameTodo.value);
+            saveToStorage();
+        }
+    });
 });
     
 renderList();

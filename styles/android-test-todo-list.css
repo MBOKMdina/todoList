@@ -152,7 +152,8 @@ body
     cursor: pointer;
 }
 
-.add
+.add,
+.subtract
 {
     height: 20px;
     width: 20px;
@@ -178,7 +179,7 @@ body
 }
 
 
-@media (min-height: 695.3px)/*Will apply all styles until min height is met*/
+@media (max-height: 695.3px)/*Will apply all styles until max height is met*/
 {
     .contents
     {
@@ -189,12 +190,14 @@ body
     {
         /*height: 42.4px;*/
         width: 508.8px;
+        font-size: 39.9999px;
     }
 
     .enter-button
     {
         height: 63.6;
         width: 141.18px;
+        font-size: 39.9999px;
     }
 
     .x
@@ -319,7 +322,19 @@ body
         cursor: pointer;
     }
 
+    .addToDoList
+    {
+        height: 120px;
+        width: 120px;
+    }
+
     .add
+    {
+        height: 60px;
+        width: 60px;
+    }
+
+    .subtract
     {
         height: 20px;
         width: 20px;

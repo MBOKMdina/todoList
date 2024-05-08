@@ -52,7 +52,18 @@ document.querySelector('.js-addToDoList').addEventListener('click', ()=>
         document.querySelector('.js-add-procedure').innerHTML = ``;
         addList(nameTodo.value);
         saveToStorage();
-    });    
+    });
+    
+    document.addEventListener('keydown', (event)=>
+    {
+        if(event.key === 'Enter')
+        {
+            let nameTodo = document.querySelector('.js-input');
+            document.querySelector('.js-add-procedure').innerHTML = ``;
+            addList(nameTodo.value);
+            saveToStorage();
+        }
+    });
 });
     
 renderList();
@@ -167,7 +178,7 @@ function  renderList()
                 <input placeholder="Task" class="js-name-input${index} name-input">
                 <input placeholder="Time" class="js-due-date-input${index} due-date-input">
                 <button class="add-todo-button js-add-todo-button">Add</button>
-                <div class="subtractList js-subtract-list"><img class="add" src="images/subtraction.png"></div>
+                <div class="subtractList js-subtract-list"><img class="subtract" src="images/subtraction.png"></div>
             </div>
             <div class="js-todo-list${index} todo-grid"></div>
         </div>`;
