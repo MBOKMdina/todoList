@@ -89,8 +89,8 @@ function renderTodoList(indexMain,todoList)
             
         }
         const html = `
-        <div>${name}</div>
-        <div>${time}</div>
+        <div class="description">${name}</div>
+        <div class="time">${time}</div>
         <button class="delete-todo-button js-delete-todo-button${indexMain}">Delete</button>
         <div class="checkBox js-checkBox" data-check-id="${checkBoxId}">${checked}</div>
         `; 

@@ -178,7 +178,6 @@ body
     margin-right: 25px;
 }
 
-
 @media (min-height: 695.3px)/*Will apply all styles until min height is met*/
 {
     .checkBox
@@ -287,7 +286,7 @@ body
     .todo-input-grid
     {
         display: grid;
-        grid-template-columns: 200px 150px 100px 1fr;
+        grid-template-columns: 300px 225px 200px 1fr;
         column-gap: 10px;
         row-gap: 10px;
         align-items: center;
@@ -302,7 +301,7 @@ body
     .todo-grid
     {
         display: grid;
-        grid-template-columns: 200px 150px 100px 1fr;
+        grid-template-columns: 300px 225px 200px 1fr;
         column-gap: 10px;
         row-gap: 10px;
         align-items: center;
@@ -363,6 +362,11 @@ body
     .todo-block
     {
         margin-right: 25px;
+    }
+
+    .description
+    {
+        overflow: hidden;
     }
 }
 
