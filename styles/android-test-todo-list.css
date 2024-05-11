@@ -178,7 +178,7 @@ body
     margin-right: 25px;
 }
 
-@media (min-height: 695.3px)/*Will apply all styles until min height is met*/
+@media (min-height: 889.8px)/*Will apply all styles until min height is met*/
 {
     .checkBox
     {
