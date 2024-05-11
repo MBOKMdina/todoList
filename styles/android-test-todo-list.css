@@ -179,7 +179,7 @@ body
 }
 
 
-@media (max-height: 695.3px)/*Will apply all styles until max height is met*/
+@media (min-height: 695.3px)/*Will apply all styles until min height is met*/
 {
     .checkBox
     {
