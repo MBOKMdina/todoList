@@ -148,13 +148,11 @@ function renderTodoList(indexMain,todoList)
                 document.querySelector('.js-enhanced-description').innerHTML = ``;
             });
 
-            document.addEventListener('keydown', (event)=>
+            document.querySelector('.js-x2').addEventListener('click', (event)=>
             {
-                if(event.key === 'Back')
-                {
-                    document.querySelector('.js-enhanced-description').innerHTML = ``;
-                }
+                document.querySelector('.js-enhanced-description').innerHTML = ``;
             });
+
         });
     });
 };
@@ -291,12 +289,9 @@ function  renderList()
                 document.querySelector('.js-enhanced-description').innerHTML = ``;
             })
 
-            document.addEventListener('keydown', (event)=>
+            document.querySelector('.js-x2').addEventListener('click', (event)=>
             {
-                if(event.key === 'Back')
-                {
-                    document.querySelector('.js-enhanced-description').innerHTML = ``;
-                }
+                document.querySelector('.js-enhanced-description').innerHTML = ``;
             });
         });
     });
