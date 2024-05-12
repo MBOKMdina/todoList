@@ -64,6 +64,8 @@ document.querySelector('.js-addToDoList').addEventListener('click', ()=>
             saveToStorage();
         }
     });
+    checkBox();
+    description();
 });
     
 renderList();
@@ -105,48 +107,6 @@ function renderTodoList(indexMain,todoList)
             todoList.splice(index, 1);
             renderTodoList(indexMain, todoList);
             saveToStorage();
-        });
-    });
-    document.querySelectorAll('.js-checkBox').forEach((checkBox)=>
-    {
-        let specified = checkBox.dataset.checkId;
-        let listIndex = specified.substring(0, 1);
-        let checkBoxIndex = specified.substring(specified.length - 1);
-        checkBox.addEventListener('click',()=>
-        {
-            if(checkBox.innerHTML === '')
-            {
-                list[listIndex].todoList[checkBoxIndex].complete = true;
-                checkBox.innerHTML =`
-                <img class="check" src="images/check-mark.png">
-                `;
-            }
-            else
-            {
-                list[listIndex].todoList[checkBoxIndex].complete = false;
-                checkBox.innerHTML = '';
-            }
-            saveToStorage();
-        });
-    });
-
-    document.querySelectorAll('.js-description').forEach((description)=>
-    {
-        description.addEventListener('click',()=>
-        {
-            console.log(description);
-            let enhanced = description.innerHTML;
-            document.querySelector('.js-enhanced-description').innerHTML = `
-                <div class="background"></div>
-                <div class="enhanced-description-ui">
-                    <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
-                    ${enhanced}
-                </div>
-            `;
-            document.querySelector('.js-x2').addEventListener('click', ()=>
-            {
-                document.querySelector('.js-enhanced-description').innerHTML = ``;
-            })
         });
     });
 };
@@ -242,6 +202,27 @@ function  renderList()
             renderTodoList(index, todoList);
         });
     });*/
+    checkBox();
+    description();
+};
+
+function addList(todoName)
+{
+    list.push(
+    {
+        name: todoName,
+        todoList: []
+    });
+    renderList();
+}
+
+function saveToStorage()
+{
+    localStorage.setItem('list', JSON.stringify(list));
+}
+
+function checkBox()
+{
     document.querySelectorAll('.js-checkBox').forEach((checkBox)=>
     {
         let specified = checkBox.dataset.checkId;
@@ -264,38 +245,31 @@ function  renderList()
             saveToStorage();
         });
     });
+}
+
+function description()
+{
     document.querySelectorAll('.js-description').forEach((description)=>
     {
         description.addEventListener('click',()=>
         {
-            console.log(description);
             let enhanced = description.innerHTML;
             document.querySelector('.js-enhanced-description').innerHTML = `
-                <div class="background"></div>
+                <div class="background js-background"></div>
                 <div class="enhanced-description-ui">
                     <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
-                    <div>${enhanced}</div>
+                    ${enhanced}
                 </div>
             `;
-            document.querySelector('.js-x2').addEventListener('click', ()=>
+            document.querySelector('.js-background').addEventListener('click', ()=>
             {
                 document.querySelector('.js-enhanced-description').innerHTML = ``;
             })
+
+            document.querySelector('.js-x2').addEventListener('click', (event)=>
+            {
+                document.querySelector('.js-enhanced-description').innerHTML = ``;
+            });
         });
     });
-};
-
-function addList(todoName)
-{
-    list.push(
-    {
-        name: todoName,
-        todoList: []
-    });
-    renderList();
-}
-
-function saveToStorage()
-{
-    localStorage.setItem('list', JSON.stringify(list));
 }

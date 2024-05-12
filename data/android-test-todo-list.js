@@ -107,54 +107,8 @@ function renderTodoList(indexMain,todoList)
             saveToStorage();
         });
     });
-    document.querySelectorAll('.js-checkBox').forEach((checkBox)=>
-    {
-        let specified = checkBox.dataset.checkId;
-        let listIndex = specified.substring(0, 1);
-        let checkBoxIndex = specified.substring(specified.length - 1);
-        checkBox.addEventListener('click',()=>
-        {
-            if(checkBox.innerHTML === '')
-            {
-                list[listIndex].todoList[checkBoxIndex].complete = true;
-                checkBox.innerHTML =`
-                <img class="check" src="images/check-mark.png">
-                `;
-            }
-            else
-            {
-                list[listIndex].todoList[checkBoxIndex].complete = false;
-                checkBox.innerHTML = '';
-            }
-            saveToStorage();
-        });
-    });
-
-    document.querySelectorAll('.js-description').forEach((description)=>
-    {
-        description.addEventListener('click',()=>
-        {
-            console.log(description);
-            let enhanced = description.innerHTML;
-            document.querySelector('.js-enhanced-description').innerHTML = `
-                <div class="background js-background"></div>
-                <div class="enhanced-description-ui">
-                    <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
-                    ${enhanced}
-                </div>
-            `;
-            document.querySelector('.js-background').addEventListener('click', ()=>
-            {
-                document.querySelector('.js-enhanced-description').innerHTML = ``;
-            });
-
-            document.querySelector('.js-x2').addEventListener('click', (event)=>
-            {
-                document.querySelector('.js-enhanced-description').innerHTML = ``;
-            });
-
-        });
-    });
+    checkBox();
+    description();
 };
 
 /*document.querySelector('.js-add-todo-button').addEventListener('click', ()=>
@@ -240,14 +194,27 @@ function  renderList()
             saveToStorage();
         });
     });
-    /*document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index)=>
+    checkBox();
+    description();
+};
+
+function addList(todoName)
+{
+    list.push(
     {
-        deleteButton.addEventListener('click', ()=>
-        {
-            todoList.splice(index, 1);
-            renderTodoList(index, todoList);
-        });
-    });*/
+        name: todoName,
+        todoList: []
+    });
+    renderList();
+}
+
+function saveToStorage()
+{
+    console.log('Saved to local storage');
+}
+
+function checkBox()
+{
     document.querySelectorAll('.js-checkBox').forEach((checkBox)=>
     {
         let specified = checkBox.dataset.checkId;
@@ -270,12 +237,14 @@ function  renderList()
             saveToStorage();
         });
     });
+}
 
+function description()
+{
     document.querySelectorAll('.js-description').forEach((description)=>
     {
         description.addEventListener('click',()=>
         {
-            console.log(description);
             let enhanced = description.innerHTML;
             document.querySelector('.js-enhanced-description').innerHTML = `
                 <div class="background js-background"></div>
@@ -295,19 +264,4 @@ function  renderList()
             });
         });
     });
-};
-
-function addList(todoName)
-{
-    list.push(
-    {
-        name: todoName,
-        todoList: []
-    });
-    renderList();
-}
-
-function saveToStorage()
-{
-    console.log('Saved to local storage');
 }
