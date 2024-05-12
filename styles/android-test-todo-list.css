@@ -400,12 +400,12 @@ body
     {
         background-color: white;
         height: 240px;
-        width: 860px;
+        width: 800px;
         position: fixed;
         top: 50%;
         left: 50%;
         margin-top: -200px;
-        margin-left: -510px;
+        margin-left: -480px;
         border-radius: 60px;
         overflow: auto;
         padding: 80px;
