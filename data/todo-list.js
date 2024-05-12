@@ -139,7 +139,7 @@ function renderTodoList(indexMain,todoList)
             document.querySelector('.js-enhanced-description').innerHTML = `
                 <div class="background"></div>
                 <div class="enhanced-description-ui">
-                    <div><img class="x2 js-x2" src="images/x.svg"></div>
+                    <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
                     ${enhanced}
                 </div>
             `;
@@ -273,7 +273,7 @@ function  renderList()
             document.querySelector('.js-enhanced-description').innerHTML = `
                 <div class="background"></div>
                 <div class="enhanced-description-ui">
-                    <div><img class="x2 js-x2" src="images/x.svg"></div>
+                    <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
                     <div>${enhanced}</div>
                 </div>
             `;
