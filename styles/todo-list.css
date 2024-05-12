@@ -175,3 +175,35 @@ body
 {
     margin-right: 25px;
 }
+
+.enhanced-description-ui
+{
+    background-color: white;
+    height: 80px;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -40.8px;
+    margin-left: -150.8px;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 30px;
+    word-wrap: break-word;
+}
+
+.x2
+{
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    margin-top: -25px;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.description
+{
+    overflow: hidden;
+    cursor: pointer;
+}
