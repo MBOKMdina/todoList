@@ -221,7 +221,7 @@ body
     cursor: pointer;
 }
 
-@media (min-height: 889.8px)/*Will apply all styles until min height is met*/
+@media (min-height: 700px)/*Will apply all styles until min height is met*/
 {
     .checkBox
     {
@@ -417,7 +417,7 @@ body
         left: 50%;
         margin-top: -200px;
         margin-left: -430px;
-        border-radius: 20px;
+        border-radius: 30px;
         overflow: auto;
         padding: 80px;
         word-wrap: break-word;
