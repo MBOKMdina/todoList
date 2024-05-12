@@ -221,7 +221,7 @@ body
     cursor: pointer;
 }
 
-@media (min-height: 889.8px)/*Will apply all styles until min height is met*/
+@media (min-height: 700px)/*Will apply all styles until min height is met*/
 {
     .checkBox
     {
@@ -449,6 +449,12 @@ body
     {
         overflow: hidden;
         cursor: pointer;
+    }
+
+    .block
+    {
+        display: flex;
+        flex-direction: column;
     }
 }
 
