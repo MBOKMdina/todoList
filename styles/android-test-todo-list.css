@@ -243,6 +243,11 @@ body
     cursor: pointer;
 }
 
+.list-heading
+{
+    font-weight: bold;
+}
+
 @media (min-height: 889.8px)/*Will apply all styles until min height is met*/
 {
     .checkBox

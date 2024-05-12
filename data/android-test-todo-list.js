@@ -153,7 +153,7 @@ function  renderList()
         todoList = listObject.todoList;
         let html = `
         <div class="todo-block">
-            <p>${name}</p>
+            <p class="list-heading">${name}</p>
             <div class="todo-input-grid">
                 <input placeholder="Task" class="js-name-input${index} name-input">
                 <input placeholder="Time" class="js-due-date-input${index} due-date-input">
