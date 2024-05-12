@@ -137,16 +137,24 @@ function renderTodoList(indexMain,todoList)
             console.log(description);
             let enhanced = description.innerHTML;
             document.querySelector('.js-enhanced-description').innerHTML = `
-                <div class="background"></div>
+                <div class="background js-background"></div>
                 <div class="enhanced-description-ui">
                     <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
                     ${enhanced}
                 </div>
             `;
-            document.querySelector('.js-x2').addEventListener('click', ()=>
+            document.querySelector('.js-background').addEventListener('click', ()=>
             {
                 document.querySelector('.js-enhanced-description').innerHTML = ``;
-            })
+            });
+
+            document.addEventListener('keydown', (event)=>
+            {
+                if(event.key === 'Back')
+                {
+                    document.querySelector('.js-enhanced-description').innerHTML = ``;
+                }
+            });
         });
     });
 };
@@ -272,16 +280,24 @@ function  renderList()
             console.log(description);
             let enhanced = description.innerHTML;
             document.querySelector('.js-enhanced-description').innerHTML = `
-                <div class="background"></div>
+                <div class="background js-background"></div>
                 <div class="enhanced-description-ui">
                     <div class="x2 js-x2"><img class="x2-img" src="images/x.svg"></div>
                     ${enhanced}
                 </div>
             `;
-            document.querySelector('.js-x2').addEventListener('click', ()=>
+            document.querySelector('.js-background').addEventListener('click', ()=>
             {
                 document.querySelector('.js-enhanced-description').innerHTML = ``;
             })
+
+            document.addEventListener('keydown', (event)=>
+            {
+                if(event.key === 'Back')
+                {
+                    document.querySelector('.js-enhanced-description').innerHTML = ``;
+                }
+            });
         });
     });
 };
