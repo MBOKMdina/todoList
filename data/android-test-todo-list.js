@@ -1,4 +1,4 @@
-let list = [];
+let list = JSON.parse(localStorage.getItem('list')) || [];
 /*[
     {
         name: 'Khumbos plans', 
@@ -210,7 +210,7 @@ function addList(todoName)
 
 function saveToStorage()
 {
-    console.log('Saved to local storage');
+    localStorage.setItem('list', JSON.stringify(list));
 }
 
 function checkBox()
