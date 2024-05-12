@@ -77,7 +77,7 @@ function renderTodoList(indexMain,todoList)
         //const name = todoObject.name;
         //const dueDate = todoObject.dueDate;
         count++;
-        let checkBoxId = `${indexMain}${count}`;
+        let rowId = `${indexMain}${count}`;
         const { name, time, complete} = todoObject;
         let checked = '';
         if(complete)
@@ -89,10 +89,10 @@ function renderTodoList(indexMain,todoList)
             
         }
         const html = `
-        <div>${name}</div>
+        <div class="description js-description">${name}</div>
         <div>${time}</div>
         <button class="delete-todo-button js-delete-todo-button${indexMain}">Delete</button>
-        <div class="checkBox js-checkBox" data-check-id="${checkBoxId}">${checked}</div>
+        <div class="checkBox js-checkBox" data-check-id="${rowId}">${checked}</div>
         `; 
         todoListHTML += html;
 
@@ -127,6 +127,26 @@ function renderTodoList(indexMain,todoList)
                 checkBox.innerHTML = '';
             }
             saveToStorage();
+        });
+    });
+
+    document.querySelectorAll('.js-description').forEach((description)=>
+    {
+        description.addEventListener('click',()=>
+        {
+            console.log(description);
+            let enhanced = description.innerHTML;
+            document.querySelector('.js-enhanced-description').innerHTML = `
+                <div class="background"></div>
+                <div class="enhanced-description-ui">
+                    <div><img class="x2 js-x2" src="images/x.svg"></div>
+                    ${enhanced}
+                </div>
+            `;
+            document.querySelector('.js-x2').addEventListener('click', ()=>
+            {
+                document.querySelector('.js-enhanced-description').innerHTML = ``;
+            })
         });
     });
 };
@@ -242,6 +262,25 @@ function  renderList()
                 checkBox.innerHTML = '';
             }
             saveToStorage();
+        });
+    });
+    document.querySelectorAll('.js-description').forEach((description)=>
+    {
+        description.addEventListener('click',()=>
+        {
+            console.log(description);
+            let enhanced = description.innerHTML;
+            document.querySelector('.js-enhanced-description').innerHTML = `
+                <div class="background"></div>
+                <div class="enhanced-description-ui">
+                    <div><img class="x2 js-x2" src="images/x.svg"></div>
+                    <div>${enhanced}</div>
+                </div>
+            `;
+            document.querySelector('.js-x2').addEventListener('click', ()=>
+            {
+                document.querySelector('.js-enhanced-description').innerHTML = ``;
+            })
         });
     });
 };
